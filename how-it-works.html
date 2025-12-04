@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How Nura BioHealth Works - From consultation to delivery and ongoing support">
+  <title>How It Works | Nura BioHealth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'nura-teal': '#0F7A79',
+            'nura-charcoal': '#111111',
+            'nura-gray': '#7A7A7A',
+            'nura-coral': '#FF6F61',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif;}
+    .text-gradient {
+      background: linear-gradient(135deg, #0F7A79 0%, #FF6F61 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .step-card {
+      transition: all 0.3s ease;
+    }
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body class="bg-white text-nura-charcoal">
+
+  <!-- Navigation -->
+  <header class="fixed w-full top-0 z-50 bg-white shadow-sm">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-nura-teal rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+          </svg>
+        </div>
+        <a href="index.html" class="text-2xl font-bold text-nura-teal">Nura <span class="text-nura-charcoal"> BioHealth</span></a>
+      </div>
+      
+      <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-nura-charcoal hover:text-nura-teal font-medium">Home</a>
+
+        <div class="dropdown relative">
+          <button class="text-nura-charcoal hover:text-nura-teal font-medium flex items-center gap-1">
+            Treatments
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="dropdown-menu hidden absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 border border-gray-100">
+            <a href="index.html#weight-loss" class="block px-4 py-3 text-nura-charcoal hover:bg-nura-teal/5 hover:text-nura-teal transition">Weight Loss</a>
+            <a href="index.html#anti-aging" class="block px-4 py-3 text-nura-charcoal hover:bg-nura-teal/5 hover:text-nura-teal transition">Anti-Aging</a>
+            <a href="index.html#peptides" class="block px-4 py-3 text-nura-charcoal hover:bg-nura-teal/5 hover:text-nura-teal transition">Peptides</a>
+          </div>
+        </div>
+        <a href="how-it-works.html" class="text-nura-teal font-semibold">How it works</a>
+        <a href="index.html#about" class="text-nura-charcoal hover:text-nura-teal font-medium">About</a>
+        <a href="index.html#blog" class="text-nura-charcoal hover:text-nura-teal font-medium">Blog</a>
+        <a href="index.html#faq" class="text-nura-charcoal hover:text-nura-teal font-medium">FAQ</a>
+      </div>
+      
+      <div class="hidden md:block">
+        <button class="bg-nura-coral text-white px-6 py-3 rounded-full font-semibold hover:bg-opacity-90 transition shadow-lg">
+          Get Started
+        </button>
+      </div>
+      
+      <button id="mobile-menu-btn" class="md:hidden text-nura-charcoal">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </nav>
+    
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+      <div class="flex flex-col space-y-4">
+        <a href="how-it-works.html" class="text-nura-teal font-semibold">How it works</a>
+        <a href="index.html#about" class="text-nura-charcoal hover:text-nura-teal font-medium">About</a>
+        <a href="index.html#blog" class="text-nura-charcoal hover:text-nura-teal font-medium">Blog</a>
+        <a href="index.html#faq" class="text-nura-charcoal hover:text-nura-teal font-medium">FAQ</a>
+        <button class="bg-nura-coral text-white px-6 py-3 rounded-full font-semibold w-full hover:bg-opacity-90 transition">
+          Get Started
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 px-6 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto text-center max-w-4xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        How Nura BioHealth <span class="text-gradient">Works</span>
+      </h1>
+      <p class="text-lg md:text-xl text-nura-gray max-w-3xl mx-auto leading-relaxed">
+        From your first consultation to ongoing support, Nura BioHealth makes the process simple and reassuring. Here's what to expect when you start.
+      </p>
+    </div>
+  </section>
+
+  <!-- Step 1: Tell us about yourself -->
+  <section class="py-20 px-6">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div class="order-2 md:order-1">
+          <div class="inline-block bg-nura-teal/10 text-nura-teal px-4 py-2 rounded-full font-semibold mb-4">
+            Step 1
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Tell us about yourself
+          </h2>
+          <p class="text-lg text-nura-gray mb-6 leading-relaxed">
+            Complete a brief online form to share your health history, current medications, and goals. It only takes a few minutes, and you can choose between an asynchronous review or a live video visit.
+          </p>
+          <p class="text-lg text-nura-gray leading-relaxed">
+            Both options are secure, HIPAA-compliant, and designed to fit your schedule.
+          </p>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="bg-gradient-to-br from-nura-teal/10 to-nura-coral/10 p-8 rounded-3xl">
+            <svg class="w-full h-64 text-nura-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 2: Provider Review -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div>
+          <div class="bg-gradient-to-br from-nura-coral/10 to-nura-teal/10 p-8 rounded-3xl">
+            <svg class="w-full h-64 text-nura-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <div class="inline-block bg-nura-coral/10 text-nura-coral px-4 py-2 rounded-full font-semibold mb-4">
+            Step 2
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Provider reviews your information
+          </h2>
+          <p class="text-lg text-nura-gray mb-6 leading-relaxed">
+            After you complete your intake form, a licensed provider reviews all the details to create a safe and effective plan that fits your goals.
+          </p>
+          <div class="bg-white p-6 rounded-2xl border border-gray-200 mb-4">
+            <h4 class="font-bold text-nura-charcoal mb-2">Live (synchronous)</h4>
+            <p class="text-nura-gray">Real-time video or phone visit with your provider.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl border border-gray-200">
+            <h4 class="font-bold text-nura-charcoal mb-2">Message-based (asynchronous)</h4>
+            <p class="text-nura-gray">Secure online visit, where your provider reviews your information and follows up with your care plan.</p>
+          </div>
+          <p class="text-sm text-nura-gray mt-6 leading-relaxed">
+            Your provider will choose the format that's best for your situation, and may reach out with questions or schedule a quick live visit before prescribing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 3: Delivery -->
+  <section class="py-20 px-6">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div class="order-2 md:order-1">
+          <div class="inline-block bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-semibold mb-4">
+            Step 3
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Medications delivered to your door
+          </h2>
+          <p class="text-lg text-nura-gray mb-6 leading-relaxed">
+            After your plan is approved, your prescription is compounded by our in-house, licensed pharmacy and shipped directly to your door.
+          </p>
+          <p class="text-lg text-nura-gray mb-6 leading-relaxed">
+            We include all necessary supplies, and packaging is discreet to protect your privacy. We send tracking information, so you always know when to expect your package.
+          </p>
+          <div class="flex items-start gap-4 bg-nura-teal/5 p-6 rounded-2xl">
+            <svg class="w-6 h-6 text-nura-teal flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p class="text-nura-gray">Typically ships within 3-5 business days with full tracking</p>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="bg-gradient-to-br from-purple-100 to-nura-teal/10 p-8 rounded-3xl">
+            <svg class="w-full h-64 text-nura-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 4: Ongoing Support -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div>
+          <div class="bg-gradient-to-br from-nura-teal/10 to-nura-coral/10 p-8 rounded-3xl">
+            <svg class="w-full h-64 text-nura-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <div class="inline-block bg-nura-teal/10 text-nura-teal px-4 py-2 rounded-full font-semibold mb-4">
+            Step 4
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Ongoing support for your journey
+          </h2>
+          <p class="text-lg text-nura-gray mb-6 leading-relaxed">
+            Our relationship doesn't end when your package arrives. We check in regularly to see how you're doing, adjust dosing if needed, and answer questions so you always feel supported.
+          </p>
+          <p class="text-lg text-nura-gray leading-relaxed">
+            Whether it's through reminders, follow-up consults, or secure messages with your provider, you're never left on your own. We're here to help you get the best possible results at every step.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 px-6 bg-gradient-to-br from-nura-teal to-nura-teal/80">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          What our patients are saying
+        </h2>
+        <p class="text-lg text-white/90 max-w-2xl mx-auto">
+          Real experiences from people who've transformed their health with Nura BioHealth
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          </div>
+          <p class="text-white text-lg mb-6 leading-relaxed">
+            "Nura BioHealth made the whole process smooth and simple. I started my treatment quickly and already feel healthier and more confident each day."
+          </p>
+          <p class="text-white/80">— Emily R., San Diego</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          </div>
+          <p class="text-white text-lg mb-6 leading-relaxed">
+            "Booking my consult was quick and clear. I loved the transparent pricing and the support team kept in touch to make sure I stayed on track."
+          </p>
+          <p class="text-white/80">— Michael T., Boston</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-6 bg-white">
+    <div class="container mx-auto text-center max-w-4xl">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Ready to take control of your health?
+      </h2>
+      <p class="text-xl text-nura-gray mb-8 max-w-2xl mx-auto">
+        Join thousands already taking control of their health with trusted providers, clear pricing, and ongoing support that makes the difference.
+      </p>
+      <button class="bg-nura-coral text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-opacity-90 transition-all shadow-2xl hover:scale-105">
+        Get Started Today
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-nura-charcoal text-white py-12 px-6">
+    <div class="container mx-auto grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <div class="w-10 h-10 bg-nura-teal rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <span class="text-xl font-bold">NuraBioHealth</span>
+        </div>
+        <p class="text-white/70">Better health, with care built around you.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Services</h4>
+        <ul class="space-y-2 text-white/70">
+          <li><a href="index.html#weight-loss" class="hover:text-nura-coral transition-colors">Weight Loss</a></li>
+          <li><a href="index.html#anti-aging" class="hover:text-nura-coral transition-colors">Anti-Aging</a></li>
+          <li><a href="index.html#peptides" class="hover:text-nura-coral transition-colors">Peptides</a></li>
+          <li><a href="#" class="hover:text-nura-coral transition-colors">Pharmacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Company</h4>
+        <ul class="space-y-2 text-white/70">
+          <li><a href="#" class="hover:text-nura-coral transition-colors">About Us</a></li>
+          <li><a href="#" class="hover:text-nura-coral transition-colors">Careers</a></li>
+          <li><a href="#" class="hover:text-nura-coral transition-colors">Blog</a></li>
+          <li><a href="#" class="hover:text-nura-coral transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Legal</h4>
+        <ul class="space-y-2 text-white/70">
+          <li><a href="#" class="hover:text-nura-coral transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-nura-coral transition-colors">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-nura-coral transition-colors">HIPAA Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-8 text-center text-white/70">
+      <p>&copy; 2025 Nura BioHealth. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
